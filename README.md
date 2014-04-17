@@ -1,4 +1,8 @@
-lvr-coq
-=======
+:sparkles: LVR-Coq :sparkles:
+==========
 
-Coq related material for the Logic in computer science course
+Coq :chicken: related material for the Logic in computer science course.
+
+
+
+
