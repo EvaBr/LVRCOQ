@@ -37,12 +37,12 @@ Proof.
     auto.
   - destruct IHn.
     + right.
-      destruct H.
+      destruct H. (* as [k G] *)
       exists x.
       auto.
     + left.
       destruct H.
-      exists (S x).
+      exists (S x). (* ali k + 1, oziroma x + 1 *)
       omega.
 Qed.
 
@@ -62,7 +62,7 @@ Proof.
 Qed.
 
 (* Predpostavimo, da imamo množici A in B. *)
-Parameter A B : Set. 
+Parameter A B : Set.
 
 (* Predpostavimo, da imamo predikat P na A in  Q na B. *)
 Parameter P : A -> Prop.
@@ -74,6 +74,7 @@ Proof.
   intro.
   intro.
   intro x.
+  (* lahko kar: intros y H z. *)
   apply H.
 Qed.
 
@@ -128,8 +129,18 @@ Qed.
 
 Lemma vaja_11: dn -> lem.
 Proof.
-  (* naredimo na predavanjih *)
-  admit.
+  unfold dn, lem.
+  intros D Q.
+  apply D.
+  intro G.
+  absurd Q.
+  - intro.
+    apply G.
+    left ; assumption.
+  - apply D.
+    intro L.
+    apply G.
+    right ; assumption.
 Qed.
   
 Theorem vaja_12:
@@ -140,8 +151,16 @@ Proof.
 Qed.
 
 Theorem vaja_13:
-  dn -> (~ forall x : A, ~ P x) -> exists x : A, P x.
+  dn -> ~ (forall x : A, ~ P x) -> exists x : A, P x.
 Proof.
-  (* naredimo na vajah *)
-  admit.
+  intros D H.
+  apply D.
+  intro G.
+  absurd (forall x : A, ~ P x).
+  - assumption.
+  - intros y K.
+    absurd (exists z : A, P z).
+    + assumption.
+    + exists y.
+      assumption.
 Qed.
