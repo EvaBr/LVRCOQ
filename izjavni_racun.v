@@ -1,6 +1,6 @@
 Parameter A B C : Prop.
 
-Theorem kr_en: A /\ B -> B /\ A.
+Theorem vaja2: A /\ B -> B /\ A.
 Proof.
   intro.
   split.
@@ -10,7 +10,7 @@ Proof.
     assumption.
 Qed.
 
-Theorem kr_en_drugic: A /\ B -> B /\ A.
+Theorem vaja2_drugic: A /\ B -> B /\ A.
 Proof.
   tauto.
 Qed.
@@ -93,6 +93,14 @@ Qed.
 
 
 Print vaja7.
+
+Theorem vaja6: ~ (A /\ ~A).
+Proof.
+  intro.
+  absurd A.
+  - apply H.
+  - apply H.
+Qed.
 
 
 
