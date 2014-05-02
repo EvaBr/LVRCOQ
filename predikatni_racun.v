@@ -122,7 +122,6 @@ Proof.
   intros P.
   intro.
   
-  apply H.
   intro.
   absurd 
 Qed.
