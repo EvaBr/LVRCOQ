@@ -6,11 +6,11 @@ Coq :chicken: related material for the Logic in computer science course.
 #### VAJE
 **Seznam vaj iz COQ-a in ustrezne datoteke:**
 
-1. Prve vaje: *izjavni_racun.v*
-2. Druge vaje: *predikatni_racun.v*
-3. Tretje vaje: *tipi.v*
-4. Četrte vaje: *odvisni_tipi.v*
-
+1. vaje: *izjavni_racun.v*
+2. vaje: *predikatni_racun.v*
+3. vaje: *tipi.v*
+4. vaje: *odvisni_tipi.v*
+5. vaje: *realna_stevila.v*
 
 V navedenih datotekah se nahajajo naloge z vaj.
 V datotekah, ki imajo v imenu še "resitve_s_predavanj", pa so rešitve nalog, ki smo jih naredili skupaj na predavanjih.
